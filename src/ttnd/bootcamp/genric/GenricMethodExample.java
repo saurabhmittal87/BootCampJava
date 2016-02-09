@@ -30,5 +30,8 @@ public class GenricMethodExample {
 
         System.out.println( "\nArray characterArray contains:" );
         printArray( charArray ); // pass a Character array
+        
+        Character character = new Character('c');
+        char ch = character;
     } 
 }

@@ -14,25 +14,25 @@ import java.io.IOException;
  * @author saurabh
  */
 public class CharacterStream {
-     public static void main(String[] args) throws IOException {
 
-        FileReader inputStream = null;
-        FileWriter outputStream = null;
+    public static void main(String args[]) throws IOException {
+        FileReader in = null;
+        FileWriter out = null;
 
         try {
-            inputStream = new FileReader("/home/saurabh/example/file1.txt");
-            outputStream = new FileWriter("/home/saurabh/example/file2.txt");
+            in = new FileReader("/home/saurabh/example/file1.txt");
+            out = new FileWriter("/home/saurabh/example/file2.txt");
 
             int c;
-            while ((c = inputStream.read()) != -1) {
-                outputStream.write(c);
+            while ((c = in.read()) != -1) {
+                out.write(c);
             }
         } finally {
-            if (inputStream != null) {
-                inputStream.close();
+            if (in != null) {
+                in.close();
             }
-            if (outputStream != null) {
-                outputStream.close();
+            if (out != null) {
+                out.close();
             }
         }
     }
